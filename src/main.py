@@ -8,8 +8,8 @@ import rankings
 import utils
 from PIL import Image
 
-#for icon in os.listdir("assets/icons/"):
-#    icons.create(f"assets/icons/{icon}",f"build/mode-{icon}")
+for icon in os.listdir("assets/icons/"):
+    icons.create(f"assets/icons/{icon}",f"build/mode-{icon}")
 
 rankings.create_ranks()
 instafade.create_circles()
