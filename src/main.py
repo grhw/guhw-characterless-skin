@@ -1,15 +1,19 @@
+import clutterless
+import instafade
+import rankings
+import feedback
+import icons
+import utils
+import font
+import text
+import mods
+
 import os
 import shutil
-import clutterless
-import feedback
-import font
-import icons
-import instafade
-import mods
-import rankings
-import text
-import utils
 from PIL import Image
+
+shutil.rmtree("build",ignore_errors=True)
+os.mkdir("build")
 
 for icon in os.listdir("assets/icons/"):
     icons.create(f"assets/icons/{icon}",f"build/mode-{icon}")
@@ -28,3 +32,5 @@ for to_copy in os.walk("assets/copy/"):
             utils.save_hd_sd(Image.open(f"{to_copy[0]}/{i}"),f"build/{i}")
         else:
             shutil.copy(f"{to_copy[0]}/{i}","build/")
+
+os.system(f"zip -r \"dist/zzz [ guhw no-char skin V{input("v")} ] zzz\" build/")

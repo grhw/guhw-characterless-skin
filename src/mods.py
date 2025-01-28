@@ -10,7 +10,7 @@ mods = {
     "halftime": "HT",
     "hardrock": "HR",
     "hidden": "HD",
-    "keycoop": "2P",
+    "keycoop": "CO",
     "mirror": "MR",
     "nightcore": "NC",
     "nofail": "NF",
