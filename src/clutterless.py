@@ -8,6 +8,7 @@ to_remove = [
     "comboburst.png",
     "star2.png",
     "masking-border.png",
+    "ranking-title.png",
 ]
 
 def remove_all():

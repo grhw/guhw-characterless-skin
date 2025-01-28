@@ -17,12 +17,18 @@ def text_to_image(text, font_path, font_size, color, shadow):
     draw = ImageDraw.Draw(image)
     text_bbox = draw.textbbox((0, 0), text, font=font)
 
-    image = image.resize((text_bbox[2]+text_bbox[0],text_bbox[3]+text_bbox[1]))
+    x,y = 0,0#text_bbox[0]/2,text_bbox[1]/2
+    sx,sy = x+int(text_bbox[2]*0.05),y+int(text_bbox[3]*0.05)
+    so = min(sx,sy)
+    
+    image = image.resize((text_bbox[2]+(text_bbox[0]*2)+so,text_bbox[3]+(text_bbox[1]*2)+so))
     draw = ImageDraw.Draw(image)
     
+    
+    
     if shadow:
-        draw.text((25, 25), text, fill="#000000", font=font)
-    draw.text((0, 0), text, fill=color, font=font)
+        draw.text((so, so), text, fill="#000000", font=font)
+    draw.text((x, y), text, fill=color, font=font)
 
     return image
 

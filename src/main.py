@@ -2,9 +2,12 @@ import os
 import shutil
 import clutterless
 import feedback
+import font
 import icons
 import instafade
+import mods
 import rankings
+import text
 import utils
 from PIL import Image
 
@@ -15,6 +18,9 @@ rankings.create_ranks()
 instafade.create_circles()
 clutterless.remove_all()
 feedback.create_feedback()
+font.create_font()
+text.create_texts()
+mods.create_mods()
 
 for to_copy in os.walk("assets/copy/"):
     for i in to_copy[2]:
