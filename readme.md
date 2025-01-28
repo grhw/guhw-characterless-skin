@@ -2,6 +2,8 @@
 It's my main skin. I use it.
 If you hate it, not my problem.
 
+standard is very.. performance optimized.
+
 Sounds taken from Keqing Tourney Skin.
 ## Modes
 ### Standard
