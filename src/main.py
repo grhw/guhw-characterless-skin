@@ -1,5 +1,6 @@
 import clutterless
 import instafade
+import mania
 import rankings
 import feedback
 import icons
@@ -25,6 +26,7 @@ feedback.create_feedback()
 font.create_font()
 text.create_texts()
 mods.create_mods()
+mania.create_mania()
 
 for to_copy in os.walk("assets/copy/"):
     for i in to_copy[2]:
@@ -33,4 +35,5 @@ for to_copy in os.walk("assets/copy/"):
         else:
             shutil.copy(f"{to_copy[0]}/{i}","build/")
 
+print("\n")
 os.system(f"zip -r \"dist/zzz [ guhw no-char skin V{input("v")} ] zzz.osz\" build/")

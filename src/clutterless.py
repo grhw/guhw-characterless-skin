@@ -17,7 +17,14 @@ to_remove = [
     "spinner-metre.png",
     "scorebar-bg.png",
     "scorebar-colour.png",
-    "inputoverlay-background.png"
+    "inputoverlay-background.png",
+    
+    "mania-stage-hint.png",
+    "mania-stage-bottom.png",
+    "mania-stage-light.png",
+    "mania-warningarrow.png",
+    "lightingL.png",
+    "lightingN.png",
 ]
 
 def remove_all():
