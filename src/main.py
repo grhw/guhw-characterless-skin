@@ -1,10 +1,10 @@
 import clutterless
 import instafade
-import mania
 import rankings
 import feedback
 import icons
 import utils
+import mania
 import font
 import text
 import mods

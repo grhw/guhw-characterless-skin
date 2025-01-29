@@ -9,6 +9,19 @@ text_list = {
     "spinner-rpm.png": ["RPM:",90],
     "play-unranked.png": ["Unranked",90],
     
+    "play-warningarrow.png": ["!",90],
+    "arrow-pause.png": [">",90],
+    "multi-skipped.png": ["Skipped",50],
+    
+    "section-fail.png": ["Fail..",90],
+    "section-pass.png": ["Good job!!",90],
+    
+    "count3.png": ["3...",90],
+    "count2.png": ["2...",90],
+    "count1.png": ["1...",90],
+    "go.png": ["GO!!!",60],
+    "ready.png": ["Ready...",90],
+    
     
     "pause-back.png": ["Back       ",90],
     "pause-continue.png": ["Continue",90],
