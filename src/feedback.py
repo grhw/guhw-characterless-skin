@@ -24,20 +24,22 @@ def create_feedback():
     utils.remove("build/hit300k-0.png")
     utils.remove("build/hit300g-0.png")
     
+    perf2 = utils.text_to_image("Perfect+","assets/ComfortaaBold.ttf",90,"#93beff",True)
     perf = utils.text_to_image("Perfect","assets/ComfortaaBold.ttf",90,"#93beff",True)
     great = utils.text_to_image("Great","assets/ComfortaaBold.ttf",90,"#5fff5f",True)
     good = utils.text_to_image("Okay","assets/ComfortaaBold.ttf",90,"#5ff4ff",True)
+    good2 = utils.text_to_image("Okay+","assets/ComfortaaBold.ttf",90,"#5ff4ff",True)
     okay = utils.text_to_image("Bad","assets/ComfortaaBold.ttf",90,"#4335ff",True)
     miss = utils.text_to_image("Miss","assets/ComfortaaBold.ttf",90,"#ff3535",True)
     
     mania_standard(perf,"build/hit300.png")
-    mania_standard(perf,"build/hit300k.png")
-    mania_standard(perf,"build/hit300g.png")
+    mania_standard(perf2,"build/hit300k.png")
+    mania_standard(perf2,"build/hit300g.png")
     
     mania_standard(great,"build/hit200.png")
     
     mania_standard(good,"build/hit100.png")
-    mania_standard(good,"build/hit100k.png")
+    mania_standard(good2,"build/hit100k.png")
     
     mania_standard(okay,"build/hit50.png")
     
