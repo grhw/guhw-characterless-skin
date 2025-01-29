@@ -14,6 +14,7 @@ Sounds taken from Keqing Tourney Skin.
 - No Combo Numbers
 - Quick Fading Hit Feedback
 - Slightly Smaller Hit-circles (to trick yourself to aim better) 
+- Made for being easier to read.
 ### Mania
 - Looks better than standard
 - idk. i dont skin mania usually, its accurate if you wanted to know that.
