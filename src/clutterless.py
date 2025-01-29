@@ -30,10 +30,10 @@ to_remove = [
     "taiko-bar-right-glow.png",
     "taiko-slider.png",
     "taiko-slider-fail.png",
-    "pippidonkiai.png"
-    "pippidonidle.png"
-    "pippidonfail.png"
-    "pippidonclear.png"
+    "pippidonkiai.png",
+    "pippidonidle.png",
+    "pippidonfail.png",
+    "pippidonclear.png",
 ]
 
 def remove_all():
