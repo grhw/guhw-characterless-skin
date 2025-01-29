@@ -25,6 +25,15 @@ to_remove = [
     "mania-warningarrow.png",
     "lightingL.png",
     "lightingN.png",
+    
+    "taiko-glow.png",
+    "taiko-bar-right-glow.png",
+    "taiko-slider.png",
+    "taiko-slider-fail.png",
+    "pippidonkiai.png"
+    "pippidonidle.png"
+    "pippidonfail.png"
+    "pippidonclear.png"
 ]
 
 def remove_all():

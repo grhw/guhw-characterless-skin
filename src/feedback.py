@@ -7,10 +7,12 @@ def animate_for(frames, path, new):
     for i in range(frames):
         utils.save_hd_sd(image,utils.add_before(new,f"-{i}"))
 
-def mania_standard(image,std_name):
+def all_modes(image,std_name):
     mania_name = std_name.replace("hit","mania-hit")
+    taiko_name = std_name.replace("hit","taiko-hit")
     utils.save_hd_sd(image,std_name)
     utils.save_hd_sd(image,mania_name)
+    utils.save_hd_sd(image,taiko_name)
 
 def create_feedback():
     animate_for(15,"assets/gameplay/standard/feedback-miss.png","build/hit0.png")
@@ -32,15 +34,15 @@ def create_feedback():
     okay = utils.text_to_image("Bad","assets/ComfortaaBold.ttf",90,"#4335ff",True)
     miss = utils.text_to_image("Miss","assets/ComfortaaBold.ttf",90,"#ff3535",True)
     
-    mania_standard(perf,"build/hit300.png")
-    mania_standard(perf2,"build/hit300k.png")
-    mania_standard(perf2,"build/hit300g.png")
+    all_modes(perf,"build/hit300.png")
+    all_modes(perf2,"build/hit300k.png")
+    all_modes(perf2,"build/hit300g.png")
     
-    mania_standard(great,"build/hit200.png")
+    all_modes(great,"build/hit200.png")
     
-    mania_standard(good,"build/hit100.png")
-    mania_standard(good2,"build/hit100k.png")
+    all_modes(good,"build/hit100.png")
+    all_modes(good2,"build/hit100k.png")
     
-    mania_standard(okay,"build/hit50.png")
+    all_modes(okay,"build/hit50.png")
     
-    mania_standard(miss,"build/hit0.png")
+    all_modes(miss,"build/hit0.png")
