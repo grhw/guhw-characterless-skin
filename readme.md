@@ -2,6 +2,8 @@
 It's my main skin. I use it.
 If you hate it, not my problem.
 
+Characterless, except for the background. Sorry, couldn't resist. It's just the osager.
+
 standard is very.. performance optimized.
 
 Sounds taken from Keqing Tourney Skin.
