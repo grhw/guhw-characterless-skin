@@ -1,4 +1,6 @@
 import os
+
+from coloraide import Color
 import utils
 from PIL import Image
 
@@ -24,8 +26,19 @@ mods = {
     "spunout": "SO",
     "suddendeath": "SD",
     "targetpractice": "TP",
-
 }
+
+colors = {
+    "#5eff00": "eznfhtco",
+    "#ff0000": "hr",
+    "#ff8800": "sd",
+    "#ffe600": "pf",
+    "#9900ff": "nchdcnrd",
+    "#0084ff": "dtrxapmr",
+    "#888888": "flfi",
+    "#888888": "atv2so",
+}
+
 for i in range(10):
     mods[f"key{i}"] = f"{i}K"
 
@@ -44,8 +57,15 @@ def create_mods():
         elif short.lower().endswith("k"):
             icon = Image.open(f"assets/mods/icons/key.png")
         
+        icon_color = "#ffffff"
+        for col in colors.keys():
+            col_mods = colors[col]
+            if short.lower() in col_mods:
+                icon_color = col
+        
         if icon:
             icon.thumbnail((170,45))
+            utils.tint_image(icon,Color.new(icon_color).convert("srgb").coords())
             background.paste(icon,(0,20),icon)
 
         
