@@ -10,6 +10,16 @@ def resize_to_resolution(image, width, height):
     copy.thumbnail((width, height), Image.Resampling.BILINEAR)
     return copy
 
+def tint_image(image, tint_color):
+    pixels = image.load()
+    r_,g_,b_ = tint_color
+    r,g,b = int(r_*255),int(g_*255),int(b_*255)
+    
+    for y in range(image.size[1]):
+        for x in range(image.size[0]):
+            _,_,_,a = pixels[x, y]
+            pixels[x, y] = (r,g,b,a)
+
 def text_to_image(text, font_path, font_size, color, shadow):
     font = ImageFont.truetype(font_path, font_size)
 
