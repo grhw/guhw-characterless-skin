@@ -2,6 +2,7 @@ import clutterless
 import instafade
 import rankings
 import feedback
+import skin_ini
 import icons
 import utils
 import mania
@@ -19,6 +20,7 @@ os.mkdir("build")
 for icon in os.listdir("assets/icons/"):
     icons.create(f"assets/icons/{icon}",f"build/mode-{icon}")
 
+skin_ini.generate()
 rankings.create_ranks()
 instafade.create_circles()
 clutterless.remove_all()

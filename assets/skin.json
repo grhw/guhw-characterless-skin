@@ -1,0 +1,56 @@
+{
+    "Copy": {
+        "General": {
+            "Name": "zzzz [ guhw characterless skin ] zzzz",
+            "Author": "guhw",
+            "Version": 2.7,
+            "CursorRotate": 0,
+            "CursorExpand": 0,
+            "CursorCentre": 1,
+            "CursorTrailRotate": 0,
+
+            "SliderStyle": 2,
+            "SliderBallFlip": 0,
+            "SliderBallFrames": 1,
+
+            "HitCircleOverlayAboveNumber": 1,
+            "SpinnerFadePlayfield": 0,
+            "AllowSliderBallTint": 0,
+            "AnimationFramrate": 24
+        },
+
+        "Colours": {
+            "Combo1": [225,225,225],
+
+            "SongSelectActiveText": [255,255,255],
+            "InputOverlayText": [0,0,0],
+
+            "SliderBorder": [0,0,0],
+            "SliderTrackOverride": [0,0,0],
+            "MenuGlow": [255,255,255]
+        },
+
+        "Fonts": {
+            "HitCirclePrefix": "default",
+            "HitCircleOverlap": 160,
+            "ScorePrefix": "score",
+            "ComboPrefix": "score",
+            "ScoreOverlap": 0
+        }
+    },
+
+    "Mania": {
+        "AllKey": {
+            "ColumnWidth": 64,
+            "Colour": [29,26,40,150],
+            "ColumnLineWidth": 0
+        },
+        "Copy": {
+            "HitPosition": 455,
+            "ScorePosition": 175,
+            "ComboPosition": 234,
+            "JudgementLine": 0,
+            "KeysUnderNotes": 1
+        }
+    }
+}
