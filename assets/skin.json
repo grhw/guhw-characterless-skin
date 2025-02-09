@@ -20,7 +20,7 @@
         },
 
         "Colours": {
-            "Combo1": [225,225,225],
+            "Combo1": [0,242,225],
 
             "SongSelectActiveText": [255,255,255],
             "InputOverlayText": [0,0,0],
