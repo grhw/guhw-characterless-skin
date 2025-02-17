@@ -19,7 +19,7 @@ def generate(ver):
         category = skin["Copy"][category_name]
         for key in category.keys():
             if key == "Author":
-                final.append(f"Name: {ver} {skin["Name"]}")
+                final.append(f"Name: [{ver}] {skin["Name"]}")
             value = category[key]
             final.append(f"{key}: {str(value).strip("[]")}")
 
