@@ -10,7 +10,7 @@ def create_circles():
     
     insta_fading_circle = utils.resize_by_multiplier(hit_circle,(1/0.8)*0.75)
     insta_fading_circle_alt_c = utils.resize_by_multiplier(hit_circle_alt,(1/0.8)*0.75)
-    insta_fading_approach = utils.resize_by_multiplier(approach,(1/0.8)*0.75)
+    insta_fading_approach = utils.resize_by_multiplier(approach,0.75)
     
     #colors = list(Color("").range_to(Color(""),10))
     colors = Color.steps(['#51ff00', '#a200ff'], steps=10, space='hsl')
