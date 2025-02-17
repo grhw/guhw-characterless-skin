@@ -4,21 +4,17 @@ If you hate it, not my problem.
 
 Characterless, except for the background. Sorry, couldn't resist. It's just the osager.
 
-standard is very.. performance optimized.
-
-Sounds taken from Keqing Tourney Skin.
+Sounds taken from *Keqing Tourney Skin*, and std hitcircles from *If There Was An Endpoint skin*.
 ## Download
 - [Here!](https://github.com/grhw/guhw-characterless-skin/releases)
 
 ## Modes
 ### Standard
 - Insta-fade
-- No Combo Numbers
-- Quick Fading Hit Feedback
+- Colors are based on number
 - Slightly Smaller Hit-circles (to trick yourself to aim better) 
-- Made for being easier to read.
 ### Mania
 - Looks better than standard
 - idk. i dont skin mania usually, its accurate if you wanted to know that.
 ### Taiko
-- it sucks
+- it sucks dont play it
