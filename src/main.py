@@ -38,4 +38,4 @@ for to_copy in os.walk("assets/copy/"):
             shutil.copy(f"{to_copy[0]}/{i}","build/")
 
 print("\n")
-os.system(f"zip -r \"dist/zzz__guhw_no-char_skin_V{input("v")}__zzz.osk\" build/")
+os.system(f"zip -r \"dist/[{input("x.x.x\n")}] guhw's insta-fading read.osk\" build/")
