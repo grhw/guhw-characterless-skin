@@ -20,7 +20,6 @@ os.mkdir("build")
 for icon in os.listdir("assets/icons/"):
     icons.create(f"assets/icons/{icon}",f"build/mode-{icon}")
 
-skin_ini.generate()
 rankings.create_ranks()
 instafade.create_circles()
 clutterless.remove_all()
@@ -37,5 +36,8 @@ for to_copy in os.walk("assets/copy/"):
         else:
             shutil.copy(f"{to_copy[0]}/{i}","build/")
 
+ver = input("x.x.x\n")
+
+skin_ini.generate(ver)
 print("\n")
-os.system(f"zip -r \"dist/[{input("x.x.x\n")}] guhw's insta-fading read.osk\" build/")
+os.system(f"zip -r \"dist/{ver}_guhws_insta-fading_read.osk\" build/")

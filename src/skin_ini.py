@@ -1,6 +1,6 @@
 import json
 
-def generate():
+def generate(ver):
     with open("assets/skin.json","r") as f:
         skin =  json.loads(f.read())
 
@@ -13,10 +13,13 @@ def generate():
     def copy_for_ini(string,amount):
         return (f"{string},"*(amount)).strip(",")
 
+    
     for category_name in skin["Copy"].keys():
         final.append(f"\n[{category_name}]")
         category = skin["Copy"][category_name]
         for key in category.keys():
+            if key == "Author":
+                final.append(f"Name: {ver} {skin["Name"]}")
             value = category[key]
             final.append(f"{key}: {str(value).strip("[]")}")
 
