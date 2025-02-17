@@ -40,4 +40,4 @@ ver = input("x.x.x\n")
 
 skin_ini.generate(ver)
 print("\n")
-os.system(f"zip -r \"dist/{ver}_guhws_insta-fading_read.osk\" build/")
+os.system(f"zip -r \"dist/{ver}_guhw_insta-fading_read.osk\" build/")
