@@ -33,7 +33,7 @@
 
         "Fonts": {
             "HitCirclePrefix": "default",
-            "HitCircleOverlap": 160,
+            "HitCircleOverlap": 150,
             "ScorePrefix": "score",
             "ComboPrefix": "score",
             "ScoreOverlap": 0

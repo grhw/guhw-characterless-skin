@@ -20,6 +20,11 @@ def tint_image(image, tint_color):
             _,_,_,a = pixels[x, y]
             pixels[x, y] = (r,g,b,a)
 
+def multiply_alpha(image, factor):
+    r, g, b, a = image.split()
+    a = a.point(lambda p: min(int(p * factor), 255))
+    return Image.merge("RGBA", (r, g, b, a))
+
 def text_to_image(text, font_path, font_size, color, shadow):
     font = ImageFont.truetype(font_path, font_size)
 

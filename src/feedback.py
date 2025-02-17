@@ -1,10 +1,14 @@
 import utils
 from PIL import Image
+import math
+
+def easeInQuad(t):
+    return t * t
 
 def animate_for(frames, image, new):
     utils.remove(utils.add_before(new,f"-{frames}"))
     for i in range(frames):
-        utils.save_hd_sd(image,utils.add_before(new,f"-{i}"))
+        utils.save_hd_sd(utils.multiply_alpha(image,(1-easeInQuad(i/frames))),utils.add_before(new,f"-{i}"))
 
 def all_modes(image,std_name):
     mania_name = std_name.replace("hit","mania-hit")
@@ -14,12 +18,12 @@ def all_modes(image,std_name):
     utils.save_hd_sd(image,taiko_name)
 
 def create_feedback():
-    animate_for(15,Image.open("assets/gameplay/standard/feedback-miss.png"),"build/hit0.png")
+    animate_for(30,Image.open("assets/gameplay/standard/feedback-miss.png"),"build/hit0.png")
 
-    animate_for(10,Image.open("assets/gameplay/standard/feedback-50.png"),"build/hit50.png")
+    animate_for(20,Image.open("assets/gameplay/standard/feedback-50.png"),"build/hit50.png")
     
-    animate_for(10,Image.open("assets/gameplay/standard/feedback-100.png"),"build/hit100.png")
-    animate_for(10,Image.open("assets/gameplay/standard/feedback-100.png"),"build/hit100k.png")
+    animate_for(20,Image.open("assets/gameplay/standard/feedback-100.png"),"build/hit100.png")
+    animate_for(20,Image.open("assets/gameplay/standard/feedback-100.png"),"build/hit100k.png")
     
     utils.remove("build/hit300-0.png")
     utils.remove("build/hit300k-0.png")
