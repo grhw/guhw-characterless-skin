@@ -24,8 +24,8 @@ colors = {
 
 def create_ranks():
     for rank in rankings:
-        image = utils.text_to_image(rank[0],"assets/ComfortaaBold.ttf",600,colors[rank[-1]],True)
-        small_image = utils.text_to_image(rank[0],"assets/ComfortaaBold.ttf",100,colors[rank[-1]],False)
+        image = utils.text_to_image(rank[0],"assets/Jua-Regular.ttf",780,colors[rank[-1]],True)
+        small_image = utils.text_to_image(rank[0],"assets/Jua-Regular.ttf",130,colors[rank[-1]],False)
         
         w,h = image.size
         moved = Image.new("RGBA",(w+360,h+11))

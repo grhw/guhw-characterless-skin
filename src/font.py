@@ -1,7 +1,12 @@
 import utils
 
 def char(c):
-    utils.save_hd_sd(utils.text_to_image(c,"assets/ComfortaaBold.ttf",90,"#ffffff",False),f"build/score-{c.replace("%","percent").replace(".","dot").replace(",","comma")}.png")
+    img = utils.text_to_image(c,"assets/Modak-Regular.ttf",90,"#ffffff",False)
+    w,h = img.size
+    
+    img = img.crop((0,h/8,w,h-(h/3)))
+    
+    utils.save_hd_sd(img,f"build/score-{c.replace("%","percent").replace(".","dot").replace(",","comma")}.png")
 
 def create_font():
     for n in range(10):
