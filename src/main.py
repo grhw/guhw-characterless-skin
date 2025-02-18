@@ -36,7 +36,7 @@ for to_copy in os.walk("assets/copy/"):
         else:
             shutil.copy(f"{to_copy[0]}/{i}","build/")
 
-ver = input("x.x.x\n")
+ver = "1.11.0"#input("x.x.x\n")
 
 skin_ini.generate(ver)
 print("\n")
