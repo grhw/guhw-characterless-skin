@@ -52,9 +52,7 @@ def create_feedback():
     )
     perf = utils.text_to_image(feedback["300"], fonts["feedback"], 90, "#93beff", True)
     great = utils.text_to_image(feedback["200"], fonts["feedback"], 90, "#5fff5f", True)
-    good2 = utils.text_to_image(
-        feedback["100plus"], fonts["feedback"], 90, "#a6f9ff", True
-    )
+    good2 = utils.text_to_image(feedback["100plus"], fonts["feedback"], 90, "#a6f9ff", True)
     good = utils.text_to_image(feedback["100"], fonts["feedback"], 90, "#5ff4ff", True)
     okay = utils.text_to_image(feedback["50"], fonts["feedback"], 90, "#4335ff", True)
     miss = utils.text_to_image(feedback["0"], fonts["feedback"], 90, "#ff3535", True)
