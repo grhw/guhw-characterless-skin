@@ -1,16 +1,19 @@
+import json
 from PIL import Image,ImageChops
 from coloraide import Color
 import utils
 
+with open("assets/other.json","r") as f:
+    circle_scale_size_mult = json.loads(f.read())["circleVisualSizeMultiplier"]
 
 def create_circles():
     hit_circle = Image.open("assets/gameplay/standard/hit-circle.png")
     hit_circle_alt = Image.open("assets/gameplay/standard/hit-circle-alt.png")
     approach = Image.open("assets/gameplay/standard/approach.png")
     
-    insta_fading_circle = utils.resize_by_multiplier(hit_circle,(1/0.8)*0.75)
-    insta_fading_circle_alt_c = utils.resize_by_multiplier(hit_circle_alt,(1/0.8)*0.75)
-    insta_fading_approach = utils.resize_by_multiplier(approach,0.75)
+    insta_fading_circle = utils.resize_by_multiplier(hit_circle,(1/0.8)*circle_scale_size_mult)
+    insta_fading_circle_alt_c = utils.resize_by_multiplier(hit_circle_alt,(1/0.8)*circle_scale_size_mult)
+    insta_fading_approach = utils.resize_by_multiplier(approach,circle_scale_size_mult)
     
     #colors = list(Color("").range_to(Color(""),10))
     colors = Color.steps(['#51ff00', '#a200ff'], steps=10, space='hsl')
