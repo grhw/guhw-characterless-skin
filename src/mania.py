@@ -1,3 +1,4 @@
+import json
 from coloraide import Color
 from PIL import Image
 import utils
@@ -15,11 +16,8 @@ def note(main_color):
     
     return outer
 
-colors = {
-    "1": "#ACC9FF",
-    "2": "#7B6CF0",
-    "S": "#FFABF7"
-}
+with open("assets/mania.json","r") as f:
+    colors = json.loads(f.read())
 
 def create_mania():
     inner = note(colors["2"])

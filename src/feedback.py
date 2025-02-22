@@ -35,7 +35,7 @@ def create_feedback():
     perf2 = utils.text_to_image(feedback["300plus"],"assets/ComfortaaBold.ttf",90,"#d6e6ff",True)
     perf = utils.text_to_image(feedback["300"],"assets/ComfortaaBold.ttf",90,"#93beff",True)
     great = utils.text_to_image(feedback["200"],"assets/ComfortaaBold.ttf",90,"#5fff5f",True)
-    good2 = utils.text_to_image(feedback["100+"],"assets/ComfortaaBold.ttf",90,"#a6f9ff",True)
+    good2 = utils.text_to_image(feedback["100plus"],"assets/ComfortaaBold.ttf",90,"#a6f9ff",True)
     good = utils.text_to_image(feedback["100"],"assets/ComfortaaBold.ttf",90,"#5ff4ff",True)
     okay = utils.text_to_image(feedback["50"],"assets/ComfortaaBold.ttf",90,"#4335ff",True)
     miss = utils.text_to_image(feedback["0"],"assets/ComfortaaBold.ttf",90,"#ff3535",True)
