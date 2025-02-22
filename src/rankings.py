@@ -1,31 +1,18 @@
+import json
 import utils
 from PIL import Image
 
-rankings = [
-    "D",
-    "C",
-    "B",
-    "A",
-    "S",
-    "SH",
-    "X",
-    "XH",
-]
-colors = {
-    "D": "#8f0000",
-    "C": "#9600c4",
-    "B": "#0080ca",
-    "A": "#00ff80",
-    "S": "#ffd900",
-    "X": "#dcb0ff",
-    
-    "H": "#aec0c9",
-}
+with open("assets/rankings.json","r") as f:
+    raw = json.loads(f.read())
+    colors = raw["colors"]
+    rankings = list(raw["displays"].keys())
+    displays = raw["displays"]
+    colors["H"] = colors["Silver"]
 
 def create_ranks():
     for rank in rankings:
-        image = utils.text_to_image(rank[0],"assets/Jua-Regular.ttf",780,colors[rank[-1]],True)
-        small_image = utils.text_to_image(rank[0],"assets/Jua-Regular.ttf",130,colors[rank[-1]],False)
+        image = utils.text_to_image(displays[rank],"assets/Jua-Regular.ttf",780,colors[rank[-1]],True)
+        small_image = utils.text_to_image(displays[rank],"assets/Jua-Regular.ttf",130,colors[rank[-1]],False)
         
         w,h = image.size
         moved = Image.new("RGBA",(w+360,h+11))

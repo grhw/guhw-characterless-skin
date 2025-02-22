@@ -4,8 +4,8 @@ def generate(ver):
     with open("assets/skin.json","r") as f:
         skin =  json.loads(f.read())
 
-    final = [   "#            guhw's characterless skin            #",
-                "# https://github.com/grhw/guhw-characterless-skin #"]
+    with open("assets/ini-comment.txt","r") as f:
+        final = f.read().split("\n")
 
     def center_lanes(lanes):
         return int((480/(1080/1920))/2 - ((lanes*skin["Mania"]["AllKey"]["ColumnWidth"])/2))
