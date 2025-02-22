@@ -18,3 +18,10 @@ Sounds taken from *Keqing Tourney Skin*, and std hitcircles from *If There Was A
 - Health bar broken rn will fix soon:tm:
 ### Taiko
 - it sucks dont play it
+
+
+# TODO
+- Change the skin generator into another repo
+- Create executable for generator
+- Non-instafade setting
+- Option to ship different versions of skin with patches (e.g. instafade/no instafade)
