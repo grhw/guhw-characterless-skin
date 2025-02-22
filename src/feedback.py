@@ -1,9 +1,9 @@
+from config import get_config
 import utils
 from PIL import Image
 import json
 
-with open("assets/feedback.json","r") as f:
-    feedback = json.loads(f.read())
+feedback = get_config("feedback")
 
 def easeInQuad(t):
     return t * t

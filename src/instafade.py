@@ -1,10 +1,10 @@
 import json
 from PIL import Image,ImageChops
 from coloraide import Color
+from config import get_config
 import utils
 
-with open("assets/other.json","r") as f:
-    circle_scale_size_mult = json.loads(f.read())["circleVisualSizeMultiplier"]
+circle_scale_size_mult = get_config("other")["circleVisualSizeMultiplier"]
 
 def create_circles():
     hit_circle = Image.open("assets/gameplay/standard/hit-circle.png")

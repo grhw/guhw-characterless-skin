@@ -1,13 +1,13 @@
 import json
+from config import get_config
 import utils
 from PIL import Image
 
-with open("assets/rankings.json","r") as f:
-    raw = json.loads(f.read())
-    colors = raw["colors"]
-    rankings = list(raw["displays"].keys())
-    displays = raw["displays"]
-    colors["H"] = colors["Silver"]
+raw = get_config("rankings")
+colors = raw["colors"]
+rankings = list(raw["displays"].keys())
+displays = raw["displays"]
+colors["H"] = colors["Silver"]
 
 def create_ranks():
     for rank in rankings:

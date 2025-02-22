@@ -1,6 +1,7 @@
 import json
 from coloraide import Color
 from PIL import Image
+from config import get_config
 import utils
 
 def note(main_color):
@@ -16,8 +17,7 @@ def note(main_color):
     
     return outer
 
-with open("assets/mania.json","r") as f:
-    colors = json.loads(f.read())
+colors = get_config("mania")
 
 def create_mania():
     inner = note(colors["2"])

@@ -1,8 +1,8 @@
+from config import get_config
 import utils
 import json
 
-with open("assets/text-image.json","r") as f:
-    text_list = json.loads(f.read())
+text_list = get_config("text-image")
 
 def create_texts():
     for fn in text_list.keys():

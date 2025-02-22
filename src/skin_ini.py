@@ -1,8 +1,8 @@
 import json
+from config import get_config
 
 def generate(ver):
-    with open("assets/skin.json","r") as f:
-        skin =  json.loads(f.read())
+    skin = get_config("skin")
 
     with open("assets/ini-comment.txt","r") as f:
         final = f.read().split("\n")

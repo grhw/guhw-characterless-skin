@@ -1,8 +1,8 @@
 import json
+from config import get_config
 import utils
 
-with open("assets/clutterless.json","r") as f:
-    to_remove = json.loads(f.read())
+to_remove = get_config("clutterless")
 
 def remove_all():
     for i in to_remove:
