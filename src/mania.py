@@ -6,9 +6,9 @@ import utils
 
 
 def note(main_color):
-    converted = Color.new(main_color).convert("srgb").coords()
+    converted = main_color.convert("srgb").coords()
     contrast = (
-        Color.new(main_color)
+        main_color
         .filter("brightness", 0.45)
         .filter("saturate", 1.2)
         .convert("srgb")
@@ -24,14 +24,16 @@ def note(main_color):
 
     return outer
 
+def both(main_color):
+    return note(Color.new(main_color)), note(Color.new(main_color).filter("hue-rotate",-90))
 
 colors = get_config("mania")
 
 
 def create_mania():
-    inner = note(colors["2"])
-    outer = note(colors["1"])
-    special = note(colors["S"])
+    inner,inner_hold = both(colors["2"])
+    outer,outer_hold = both(colors["1"])
+    special,special_hold = both(colors["S"])
     rec = Image.open("assets/gameplay/mania/rec.png")
     rec_held_overlay = Image.open("assets/gameplay/mania/rec_held.png")
 
@@ -39,16 +41,16 @@ def create_mania():
     hold_end = Image.open("assets/gameplay/mania/hold_end.png")
 
     utils.save_hd_sd(outer, "build/mania-note1.png")
-    utils.save_hd_sd(outer, "build/mania-note1H.png")
+    utils.save_hd_sd(outer_hold, "build/mania-note1H.png")
 
     utils.save_hd_sd(inner, "build/mania-note2.png")
-    utils.save_hd_sd(inner, "build/mania-note2H.png")
+    utils.save_hd_sd(inner_hold, "build/mania-note2H.png")
 
     utils.save_hd_sd(special, "build/mania-noteS.png")
-    utils.save_hd_sd(special, "build/mania-noteSH.png")
+    utils.save_hd_sd(special_hold, "build/mania-noteSH.png")
 
     utils.save_hd_sd(special, "build/mania-noteS.png")
-    utils.save_hd_sd(special, "build/mania-noteSH.png")
+    utils.save_hd_sd(special_hold, "build/mania-noteSH.png")
 
     for i in "12S":
         utils.save_hd_sd(rec, f"build/mania-key{i}.png")
