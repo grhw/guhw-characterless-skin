@@ -5,6 +5,7 @@ from config import get_config
 import utils
 
 circle_scale_size_mult = get_config("other")["circleVisualSizeMultiplier"]
+fonts = get_config("fonts")
 
 def create_circles():
     hit_circle = Image.open("assets/gameplay/standard/hit-circle.png")
@@ -26,7 +27,7 @@ def create_circles():
         utils.tint_image(insta_fading_circle_alt,color)
         insta_fading_circle_alt.paste(insta_fading_circle,(0,0),insta_fading_circle)
         
-        number = utils.text_to_image(str(i),"assets/ComfortaaBold.ttf",90,"#ffffff",True)
+        number = utils.text_to_image(str(i),fonts["hit-circle"],90,"#ffffff",True)
         
         w,h = number.size
         nw,nh = insta_fading_circle_alt.size

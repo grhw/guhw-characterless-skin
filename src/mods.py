@@ -1,6 +1,7 @@
 import os
 
 from coloraide import Color
+from config import get_config
 import utils
 from PIL import Image
 
@@ -41,13 +42,14 @@ colors = {
 
 for i in range(10):
     mods[f"key{i}"] = f"{i}K"
+fonts = get_config("fonts")
 
 def create_mods():
     icons = os.listdir("assets/mods/icons")
     for name in mods.keys():
         short = mods[name]
         background = Image.open("assets/mods/background.png")
-        text = utils.text_to_image(short,"assets/ComfortaaBold.ttf",60,"#FFFFFF",True)
+        text = utils.text_to_image(short,fonts["mods"],60,"#FFFFFF",True)
         text.thumbnail((170,85))
         background.paste(text,(0,85),text)
         

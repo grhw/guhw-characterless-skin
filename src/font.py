@@ -1,7 +1,8 @@
+from config import get_config
 import utils
 
 def char(c):
-    img = utils.text_to_image(c,"assets/Modak-Regular.ttf",90,"#ffffff",False)
+    img = utils.text_to_image(c,get_config("fonts")["score-and-combo"],90,"#ffffff",False)
     w,h = img.size
     
     img = img.crop((0,h/8,w,h-(h/3)))
