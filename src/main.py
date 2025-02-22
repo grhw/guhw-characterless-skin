@@ -40,4 +40,5 @@ ver = "1.11.0"#input("x.x.x\n")
 
 skin_ini.generate(ver)
 print("\n")
+os.makedirs("dist",exist_ok=True)
 os.system(f"zip -r \"dist/{ver}_guhw_insta-fading_read.osk\" build/")
