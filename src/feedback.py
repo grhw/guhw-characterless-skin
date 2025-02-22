@@ -1,6 +1,7 @@
 from config import get_config
 import utils
 from PIL import Image
+import math
 
 feedback = get_config("feedback")
 fonts = get_config("fonts")
@@ -8,11 +9,16 @@ fonts = get_config("fonts")
 
 def easeInQuad(t):
     return t * t
+def easeOutExpo(t):
+    return -math.pow(2, -10 * t) + 1
 
-
-def animate_for(frames, image, new):
+def animate_for(frames, source, new):
     utils.remove(utils.add_before(new, f"-{frames}"))
+    w,h = source.size
     for i in range(frames):
+        rev = ((1 - easeOutExpo(i / frames)) * 2) + 1
+        rot = easeInQuad(i / frames) * 45
+        image = source.resize((round(w*rev),round(h*rev)),Image.Resampling.BILINEAR).rotate(rot)
         utils.save_hd_sd(
             utils.multiply_alpha(image, (1 - easeInQuad(i / frames))),
             utils.add_before(new, f"-{i}"),

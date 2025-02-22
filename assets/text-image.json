@@ -21,8 +21,8 @@
     "ready.png": ["Ready...",90],
     
     
-    "pause-back.png": ["Back       ",90],
-    "pause-continue.png": ["Continue",90],
-    "pause-replay.png": ["Replay       ",90],
-    "pause-retry.png": ["Retry       ",90]
+    "pause-back.png":     ["                                        Back",90],
+    "pause-continue.png": ["                                        Continue",90],
+    "pause-replay.png":   ["Replay",90],
+    "pause-retry.png":    ["                                        Retry",90]
 }

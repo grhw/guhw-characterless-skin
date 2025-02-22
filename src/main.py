@@ -29,6 +29,28 @@ text.create_texts()
 mods.create_mods()
 mania.create_mania()
 
+menu_back = Image.open("assets/icons/back.png")
+template = Image.new("RGBA",menu_back.size)
+
+def easeInCubic(t):
+    return t * t * t
+def easeOutCubic(t):
+    t -= 1
+    return t * t * t + 1
+
+frames = 120
+for i in range(frames):
+    if i < frames/2:
+        x = (1 - easeInCubic(i/(frames/2)))
+    else:
+        x = easeOutCubic((i-(frames/2))/(frames/2))
+    use = template.copy()
+    use.paste(menu_back,(int(x*100),0))
+    utils.save_hd_sd(
+        use,
+        utils.add_before("build/menu-back.png", f"-{i}"),
+    )
+
 for to_copy in os.walk("assets/copy/"):
     for i in to_copy[2]:
         if i.endswith(".png"):
